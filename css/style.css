@@ -159,6 +159,7 @@ img {
   text-align: center;
   font-size: 22px;
   padding: 40px 50px 50px 50px;
+  border-radius: 20px;
 }
 
 /* Making flipcards flex */
