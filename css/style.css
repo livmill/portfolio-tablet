@@ -1,0 +1,259 @@
+nav {
+  background-color: #E7EFF3;
+  background-image:none;
+  font-family: 'Reem Kufi', sans-serif;
+  font-size:large;
+  padding-bottom: 5px;
+}
+
+body {
+  background-image: url("../imgs/background-image.png");
+  background-color:#2B4951;
+  color: #E7EFF3;
+}
+
+p {
+  padding: 10px;
+}
+
+a.skip-content{
+  background: #E7EFF3;
+  left: 0;
+  padding: 6px;
+  position: absolute;
+  top: -40px;
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
+  font-family: 'Reem Kufi', sans-serif;
+  color:#E7EFF3;
+  background-color: #2B4951;
+}
+
+a.skip-content:focus{
+  top:0px;
+  color: black;
+  text-decoration-style: solid;
+  font-family: 'Reem Kufi', sans-serif;
+  color:#E7EFF3;
+  background-color: #2B4951;
+}
+
+main {
+  font-family: 'Raleway', sans-serif;
+  padding: 10px;
+}
+
+h1 {
+  font-family: 'Reem Kufi', sans-serif;
+  padding-top: 20px;
+  font-size: 30px;
+  text-align: center;
+  color:#E7EFF3;
+}
+
+h2 {
+  font-family: 'Reem Kufi', sans-serif;
+  padding-top: 20px;
+  font-size: 20px;
+  text-align: center;
+  color:#E7EFF3;
+}
+
+.hover {
+  padding-top: 20px;
+  font-size: 14px;
+  text-align: center;
+  color:#E7EFF3;
+  font-weight: lighter;
+}
+
+nav li{
+	padding:2px;
+	display: block;
+}
+
+
+a {
+  color: #2B4951;
+  text-decoration: none;
+}
+
+li a:hover {
+  color: #6295a1;
+
+}
+
+a:visited {
+  color:#2B4951;
+}
+
+img {
+  border: 5px solid #E7EFF3;
+}
+
+.hide-mobile {
+  display: none;
+}
+
+/* Index images */
+.images, .images-extra {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.first-group, .second-group, .third-group {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  row-gap: 20px;
+}
+
+.first-group img, .second-group img, .third-group img {
+  justify-self: center;
+}
+
+/* Paper images */
+.flip-container {
+  perspective: 1000px;
+  margin: 5px;
+}
+
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+    transform: rotateY(180deg);
+}
+
+.flip-container, .front, .back {
+  width: 360px;
+  height: 280px;
+}
+
+/* Speed of the flip */
+.flipper {
+  transform-style: preserve-3d;
+  transition: 0.6s;
+  position: relative;
+}
+
+/* Hiding the back while swapping */
+.front, .back {
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  position: absolute;
+}
+
+/* Front above back */
+.front {
+  z-index: 2;
+}
+
+/* Rotate back */
+.back {
+  transform: rotateY(180deg);
+  background-color: #2B4951;
+  text-align: center;
+  font-size: 22px;
+  padding: 40px 50px 50px 50px;
+}
+
+/* Making flipcards flex */
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Handmade images */
+.longboards {
+  display:grid;
+  grid-template-columns: auto;
+  grid-row-gap: 15px;
+  grid-column-gap: 15px;
+}
+
+.chairs {
+  display:grid;
+  grid-template-columns: auto;
+  grid-row-gap: 15px;
+  grid-column-gap: 15px;
+}
+
+.currentText{
+  font-weight: bold;
+  border-bottom: 4px solid #2B4951;
+  text-transform:lowercase;
+}
+
+footer {
+  font-family: 'Reem Kufi', sans-serif;
+  font-weight: lighter;
+  background-color: #E7EFF3;
+  background-image:none;
+  color:#2B4951;
+  text-align: center;
+}
+
+/* Tablet View */
+@media screen and (min-width: 750px){
+  body {
+    color: white;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  nav {
+    position: sticky;
+    top: 0;
+    right:0;
+    left:0;
+  }
+
+  /* Index Page */
+  .hide-mobile {
+    display:initial;
+  }
+
+  .images {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
+  }
+
+  /* Digital Images */
+  .first-group, .second-group, .third-group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  /* Paper is responsive because it was made as flex from the beginning */
+
+  /* Handmade images */
+  .longboards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto auto;
+    grid-row-gap: 15px;
+    grid-column-gap: 15px;
+  }
+  
+  .chairs {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
+    grid-row-gap: 15px;
+    grid-column-gap: 15px;
+  }
+}
+
